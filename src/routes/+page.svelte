@@ -6,356 +6,356 @@
 
 <svelte:window bind:scrollY />
 
-<div class="font-sans text-gray-900 antialiased selection:bg-orange-200 selection:text-orange-900">
-	<!-- Navigation / Header (Implicit in design, maybe just the logo or minimal) -->
-	<!-- The screenshot doesn't explicitly show a header bar, but usually there is one. 
-         I will assume a minimal or transparent one, or just the content. 
-         The "W." ribbon is fixed on the right. -->
-    
-    <div class="fixed top-0 right-0 z-50 h-full pointer-events-none">
-        <div class="absolute top-[15vh] right-0 bg-black text-white w-8 md:w-10 py-4 flex flex-col items-center justify-center font-bold text-xs pointer-events-auto cursor-pointer hover:bg-gray-900 transition-colors">
-            <span class="writing-vertical-rl rotate-180 transform">Site of the Day</span>
-            <span class="mt-2 font-serif text-lg">W.</span>
-        </div>
-    </div>
+<div class="font-sans text-gray-900 antialiased selection:bg-primary-200 selection:text-primary-900">
 
 	<!-- Hero Section -->
-	<section class="relative min-h-screen w-full bg-gradient-to-b from-[#1a2c4e] via-[#4a6b9c] to-[#fdfbf7] text-white px-6 md:px-12 lg:px-24 pt-32 pb-24 flex flex-col justify-between">
-		<div class="max-w-5xl">
-			<h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.1] md:leading-[1.1] tracking-tight">
-				New Genre is a global design & technology studio accelerating tomorrow's ideas.
-			</h1>
+	<section class="relative min-h-screen w-full bg-gradient-to-b from-gray-950 via-gray-900 to-white text-white px-6 md:px-12 lg:px-24 pt-32 pb-24 flex flex-col justify-between">
+		<!-- Logo -->
+		<div class="absolute top-8 left-6 md:left-12 lg:left-24">
+			<svg width="80" height="47" viewBox="0 0 116 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M44.6215 56.0343C46.6079 53.651 49.5502 52.2726 52.6531 52.2726H94.8018C106.35 52.2726 115.711 42.9114 115.711 31.3637V20.909C115.711 9.36134 106.35 0 94.8018 0H86.6303C83.5277 0 80.5851 1.37818 78.599 3.76179L71.8003 11.9201C69.814 14.3037 66.8716 15.6818 63.7688 15.6818H21.62C10.0722 15.6818 0.710938 25.043 0.710938 36.5909V47.0454C0.710938 58.5933 10.0722 67.9546 21.62 67.9546H29.7916C32.8942 67.9546 35.8367 66.5765 37.8229 64.1929L44.6215 56.0343ZM100.029 20.909C100.029 18.022 97.6888 15.6818 94.8018 15.6818H78.7895C75.6866 15.6818 72.7443 17.0599 70.7579 19.4435L63.9593 27.602C61.9731 29.9854 59.0306 31.3637 55.9279 31.3637H21.62C18.7331 31.3637 16.3927 33.704 16.3927 36.5909V47.0454C16.3927 49.9324 18.7331 52.2726 21.62 52.2726H37.6324C40.7352 52.2726 43.6776 50.8945 45.664 48.5109L52.4626 40.3526C54.4488 37.969 57.3913 36.5909 60.4939 36.5909H94.8018C97.6888 36.5909 100.029 34.2507 100.029 31.3637V20.909Z" fill="white"/>
+			</svg>
 		</div>
 
-		<div class="mt-24">
-			<a href="#work" class="inline-flex items-center justify-center px-6 py-3 border border-white/30 rounded-full text-sm font-medium hover:bg-white hover:text-[#1a2c4e] transition-colors duration-300 backdrop-blur-sm">
-				Our work
+		<div class="max-w-5xl">
+			<h1 class="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.1] md:leading-[1.1] tracking-tight">
+				Transform ideas into production-ready interfaces through AI that reasons about design.
+			</h1>
+			<p class="text-xl md:text-2xl text-white/70 mt-8 max-w-3xl">
+				Not templates. Not guesswork. Real design reasoning that understands structure, hierarchy, and user intent.
+			</p>
+		</div>
+
+		<div class="mt-24 flex gap-4">
+			<a href="#examples" class="inline-flex items-center justify-center px-6 py-3 bg-primary-500 text-white rounded-full text-sm font-medium hover:bg-primary-600 transition-colors duration-300">
+				See examples
+			</a>
+			<a href="#how-it-works" class="inline-flex items-center justify-center px-6 py-3 border border-white/30 rounded-full text-sm font-medium hover:bg-white hover:text-gray-900 transition-colors duration-300 backdrop-blur-sm">
+				How it works
 			</a>
 		</div>
 	</section>
 
-	<!-- Trusted Partners -->
-	<section class="bg-[#fdfbf7] px-6 md:px-12 lg:px-24 py-16 md:py-24">
-		<p class="text-lg md:text-xl text-gray-600 mb-12">Our trusted partners, from bold startups to global icons</p>
+	<!-- Trusted By -->
+	<section class="bg-white px-6 md:px-12 lg:px-24 py-16 md:py-24">
+		<p class="text-lg md:text-xl text-gray-600 mb-12">Trusted by product builders shipping fast</p>
 		
 		<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8">
 			<!-- Logos placeholders -->
-			{#each ['etched', 'Accel', 'zid', 'gravity sketch', 'Sylvera', 'TESSIAN'] as partner}
-				<div class="h-20 bg-gray-100 rounded-lg flex items-center justify-center grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
-					<span class="font-semibold text-gray-800">{partner}</span>
+			{#each ['Linear', 'Vercel', 'Stripe', 'Notion', 'Figma', 'Framer'] as partner}
+				<div class="h-20 bg-gray-50 rounded-lg flex items-center justify-center grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+					<span class="font-semibold text-gray-700">{partner}</span>
 				</div>
 			{/each}
 		</div>
 	</section>
 
-    <!-- Work Section -->
-    <section class="bg-[#fdfbf7] px-6 md:px-12 lg:px-24 py-12 md:py-24" id="work">
+    <!-- Examples Section -->
+    <section class="bg-white px-6 md:px-12 lg:px-24 py-12 md:py-24" id="examples">
         <div class="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24">
-            <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-gray-900">Our work, from petal to planet</h2>
-            <a href="/work" class="hidden md:inline-flex items-center text-gray-500 hover:text-gray-900 transition-colors mt-4 md:mt-0">
-                See all <span class="ml-2">→</span>
-            </a>
+            <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-gray-900">Real interfaces, actually shipped</h2>
+            <p class="text-gray-600 mt-4 md:mt-0 max-w-md">
+                These aren't mockups. They're production interfaces built by founders using Dawnlabs.
+            </p>
         </div>
 
         <div class="space-y-24 md:space-y-32">
-            <!-- Project 1: Sylvera -->
+            <!-- Project 1: Analytics Dashboard -->
             <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-4 space-y-6">
-                    <h3 class="font-serif text-3xl md:text-4xl text-gray-900">Sylvera</h3>
+                    <h3 class="font-serif text-3xl md:text-4xl text-gray-900">Analytics Dashboard</h3>
                     <p class="text-gray-600 text-lg leading-relaxed">
-                        Sylvera incentivises investment into real climate action by providing ratings, data, and marketing insight for over 20,000 carbon credit projects.
+                        From idea to production in hours. A complete analytics dashboard with real-time data visualization, built by a solo founder with zero design experience.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-medium text-gray-600">Brand Identity</span>
-                        <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-medium text-gray-600">Digital Design</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">Dashboard</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">Data Viz</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">SaaS</span>
                     </div>
                 </div>
                 <div class="lg:col-span-8">
-                    <div class="aspect-[16/9] bg-[#003322] rounded-lg overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500 ease-out">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="text-white text-3xl font-medium flex items-center gap-2">
-                                <!-- Logo placeholder -->
-                                <div class="w-8 h-8 rounded-full border-2 border-white/80 border-t-transparent animate-spin" style="animation-duration: 3s;"></div>
-                                Sylvera
-                            </div>
-                        </div>
+                    <div class="aspect-[16/9] bg-gray-950 rounded-lg overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500 ease-out shadow-xl">
+                        <img src="/generated/image-clean-modern-dashboard-interface-on-a-la-1765980018821-0.webp" alt="Analytics Dashboard" class="w-full h-full object-cover" />
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2: Knotel -->
+            <!-- Project 2: Landing Page -->
             <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-4 space-y-6">
-                    <h3 class="font-serif text-3xl md:text-4xl text-gray-900">Knotel</h3>
+                    <h3 class="font-serif text-3xl md:text-4xl text-gray-900">SaaS Landing Page</h3>
                     <p class="text-gray-600 text-lg leading-relaxed">
-                        Transforming the digital architecture for a modern workplace provider.
+                        A conversion-optimized landing page that understands hierarchy, spacing, and user psychology. Built in an afternoon, launched the same day.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-medium text-gray-600">Website</span>
-                        <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-medium text-gray-600">Digital Design</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">Landing Page</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">Marketing</span>
                     </div>
                 </div>
                 <div class="lg:col-span-8">
-                    <div class="aspect-[16/9] bg-[#f5f5f0] rounded-lg overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500 ease-out">
-                        <!-- Image placeholder -->
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" alt="Knotel interior" class="w-full h-full object-cover" />
+                    <div class="aspect-[16/9] bg-gray-100 rounded-lg overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500 ease-out shadow-xl">
+                        <img src="/generated/image-sleek-saas-landing-page-displayed-on-a-d-1765980023138-1.webp" alt="SaaS Landing Page" class="w-full h-full object-cover" />
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3: Folio -->
+            <!-- Project 3: Mobile App -->
             <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-4 space-y-6">
-                    <h3 class="font-serif text-3xl md:text-4xl text-gray-900">Folio</h3>
+                    <h3 class="font-serif text-3xl md:text-4xl text-gray-900">Mobile App</h3>
                     <p class="text-gray-600 text-lg leading-relaxed">
-                        Folio is a digital platform designed from the ground up, helping large enterprises organise, manage and deliver design standards to streamline workflows and ensure cohesion in every project.
+                        Native-feeling mobile interfaces with proper touch targets, navigation patterns, and responsive layouts. The AI understands mobile-first design principles.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-medium text-gray-600">Brand Identity</span>
-                        <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-medium text-gray-600">Digital Design</span>
-                        <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-medium text-gray-600">Website</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">Mobile</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">iOS/Android</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">App</span>
                     </div>
                 </div>
                 <div class="lg:col-span-8">
-                    <div class="aspect-[16/9] bg-gray-200 rounded-lg overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500 ease-out">
-                        <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300">
-                             <h4 class="text-6xl font-bold text-white drop-shadow-lg">Folio</h4>
-                        </div>
+                    <div class="aspect-[16/9] bg-gray-950 rounded-lg overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500 ease-out shadow-xl flex items-center justify-center">
+                        <img src="/generated/image-mobile-app-interface-showing-on-a-smartp-1765980025561-2.webp" alt="Mobile App" class="h-full object-contain" />
                     </div>
                 </div>
             </div>
 
-            <!-- Project 4: Printosis -->
+            <!-- Project 4: Admin Panel -->
             <div class="group grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-4 space-y-6">
-                    <h3 class="font-serif text-3xl md:text-4xl text-gray-900">Printosis</h3>
+                    <h3 class="font-serif text-3xl md:text-4xl text-gray-900">Admin Panel</h3>
                     <p class="text-gray-600 text-lg leading-relaxed">
-                        Printosis is a revolutionary tool that fuses AI with orthotists using scans and patient data to generate a printable 3D model, fabricating a perfect-fit orthotic on the first attempt.
+                        Complex data tables, filters, and workflows that just work. The AI reasons about information architecture and user flows, not just visual design.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-medium text-gray-600">Brand Identity</span>
-                        <span class="px-3 py-1 border border-gray-200 rounded-full text-xs font-medium text-gray-600">3D Design</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">Admin</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">Data Tables</span>
+                        <span class="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium">Complex UI</span>
                     </div>
                 </div>
                 <div class="lg:col-span-8">
-                    <div class="aspect-[16/9] bg-[#f0f4f0] rounded-lg overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500 ease-out border border-gray-100">
-                        <div class="absolute inset-0 flex items-center justify-center bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-50"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <!-- Abstract shape placeholder -->
-                            <div class="w-32 h-32 border border-gray-300 rounded-full skew-x-12 skew-y-12"></div>
-                        </div>
+                    <div class="aspect-[16/9] bg-gray-100 rounded-lg overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500 ease-out shadow-xl border border-gray-200">
+                        <img src="/generated/image-person-working-at-desk-with-laptop-showi-1765980028319-3.webp" alt="Admin Panel" class="w-full h-full object-cover" />
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="mt-12 md:hidden">
-            <a href="/work" class="flex items-center text-gray-500 hover:text-gray-900 transition-colors">
-                See all <span class="ml-2">→</span>
-            </a>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="bg-[#fdfbf7] px-6 md:px-12 lg:px-24 py-12 md:py-24">
-        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-16 max-w-3xl">Our process, crafted through decades of shared experience</h2>
+    <!-- How It Works Section -->
+    <section class="bg-gray-50 px-6 md:px-12 lg:px-24 py-12 md:py-24" id="how-it-works">
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-4 max-w-3xl">How it works</h2>
+        <p class="text-xl text-gray-600 mb-16 max-w-2xl">Three steps from idea to production-ready interface. No design degree required.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Think -->
-            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full min-h-[400px]">
-                <h3 class="text-xl font-semibold mb-4">Think</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-auto">
-                    We read the soil to find where ideas take root, uncovering opportunities, directions, and missions.
+            <!-- Describe -->
+            <div class="bg-white p-8 rounded-xl border border-gray-200 hover:border-primary-300 transition-all duration-300 flex flex-col h-full">
+                <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-xl mb-6">1</div>
+                <h3 class="text-2xl font-semibold mb-4">Describe</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Tell Dawnlabs what you're building. "A dashboard for tracking customer metrics" or "A mobile app for booking appointments." That's it.
                 </p>
-                <div class="mt-8 flex justify-center h-48 items-end">
-                    <img src="https://images.unsplash.com/photo-1610389368568-243553229202?q=80&w=400&auto=format&fit=crop" alt="Bud" class="h-full object-contain mix-blend-multiply opacity-80" />
-                </div>
             </div>
 
-            <!-- Create -->
-            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full min-h-[400px]">
-                <h3 class="text-xl font-semibold mb-4">Create</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-auto">
-                    We coax the invisible into the inevitable, crafting identities and systems to support your growth.
+            <!-- Reason -->
+            <div class="bg-white p-8 rounded-xl border border-gray-200 hover:border-primary-300 transition-all duration-300 flex flex-col h-full">
+                <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-xl mb-6">2</div>
+                <h3 class="text-2xl font-semibold mb-4">Reason</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Our AI reasons about structure, hierarchy, and user intent. It understands design principles, not just patterns. It thinks like a designer, not a template engine.
                 </p>
-                <div class="mt-8 flex justify-center h-48 items-end">
-                    <img src="https://images.unsplash.com/photo-1507646870321-10de075e8236?q=80&w=400&auto=format&fit=crop" alt="Blooming" class="h-full object-contain mix-blend-multiply opacity-80" />
-                </div>
             </div>
 
-            <!-- Build -->
-            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full min-h-[400px]">
-                <h3 class="text-xl font-semibold mb-4">Build</h3>
-                <p class="text-gray-600 text-sm leading-relaxed mb-auto">
-                    We engineer scalable digital products and experiences ready for real-world impact.
+            <!-- Ship -->
+            <div class="bg-white p-8 rounded-xl border border-gray-200 hover:border-primary-300 transition-all duration-300 flex flex-col h-full">
+                <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-lg flex items-center justify-center font-bold text-xl mb-6">3</div>
+                <h3 class="text-2xl font-semibold mb-4">Ship</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Get production-ready code. Clean, semantic, accessible. Copy it into your codebase or iterate further. No cleanup, no "AI slop."
                 </p>
-                <div class="mt-8 flex justify-center h-48 items-end">
-                    <img src="https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?q=80&w=400&auto=format&fit=crop" alt="Flower" class="h-full object-contain mix-blend-multiply opacity-80" />
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Thoughts Section -->
-    <section class="bg-[#fdfbf7] px-6 md:px-12 lg:px-24 py-12 md:py-24">
+    <!-- Updates Section -->
+    <section class="bg-white px-6 md:px-12 lg:px-24 py-12 md:py-24">
         <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-            <h2 class="font-serif text-3xl md:text-4xl text-gray-900">Thoughts from our world, to yours</h2>
-            <a href="/thoughts" class="hidden md:inline-flex items-center text-gray-500 hover:text-gray-900 transition-colors mt-4 md:mt-0">
-                Read all <span class="ml-2">→</span>
-            </a>
+            <h2 class="font-serif text-3xl md:text-4xl text-gray-900">From the lab</h2>
+            <p class="text-gray-600 mt-4 md:mt-0">Updates, insights, and examples</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Blog Post 1 -->
+            <!-- Post 1 -->
             <div class="group cursor-pointer">
-                <div class="aspect-square bg-gray-900 rounded-lg overflow-hidden mb-4 relative">
-                     <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-4xl text-center p-4">FONTS IN USE</div>
-                </div>
-                <h3 class="text-sm font-medium text-gray-900 group-hover:underline">New Genre Featured in Fonts in Use</h3>
-            </div>
-
-             <!-- Blog Post 2 -->
-             <div class="group cursor-pointer">
-                <div class="aspect-square bg-orange-400 rounded-lg overflow-hidden mb-4 relative">
-                    <div class="absolute inset-0 flex items-center justify-center text-black font-bold text-4xl text-center p-4 rotate-12">CHILI BOMBA</div>
-                </div>
-                <h3 class="text-sm font-medium text-gray-900 group-hover:underline">Chili Bomba Featured in Fonts in Use</h3>
-            </div>
-
-             <!-- Blog Post 3 -->
-             <div class="group cursor-pointer">
-                <div class="aspect-square bg-green-800 rounded-lg overflow-hidden mb-4 relative">
-                     <div class="absolute inset-0 flex items-center justify-center text-white text-right p-8 flex-col items-end">
-                        <span class="text-sm uppercase tracking-widest mb-2">Precision</span>
-                        <span class="text-2xl font-serif">at your fingertips</span>
+                <div class="aspect-square bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg overflow-hidden mb-4 relative">
+                     <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-2xl text-center p-8">
+                        <span>Why reasoning beats templates</span>
                      </div>
                 </div>
-                <h3 class="text-sm font-medium text-gray-900 group-hover:underline">New Identity and Website for Printosis Designed by New Genre</h3>
+                <h3 class="text-base font-medium text-gray-900 group-hover:underline">How Dawnlabs thinks about design structure, not patterns</h3>
             </div>
 
-             <!-- Blog Post 4 -->
+             <!-- Post 2 -->
              <div class="group cursor-pointer">
-                <div class="aspect-square bg-gray-800 rounded-lg overflow-hidden mb-4 relative">
-                    <!-- Placeholder image -->
-                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000&auto=format&fit=crop" alt="Office" class="w-full h-full object-cover opacity-50" />
+                <div class="aspect-square bg-gray-900 rounded-lg overflow-hidden mb-4 relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-white p-8 flex-col">
+                        <span class="text-4xl mb-4">🚀</span>
+                        <span class="text-xl font-semibold text-center">Product Hunt Launch</span>
+                    </div>
                 </div>
-                <h3 class="text-sm font-medium text-gray-900 group-hover:underline">New Logo and Identity for Folio by New Genre</h3>
+                <h3 class="text-base font-medium text-gray-900 group-hover:underline">We launched on Product Hunt. Here's what we learned.</h3>
             </div>
 
-             <!-- Blog Post 5 -->
+             <!-- Post 3 -->
              <div class="group cursor-pointer">
-                <div class="aspect-square bg-black rounded-lg overflow-hidden mb-4 relative flex items-center justify-center">
-                    <div class="w-3/4 h-3/4 bg-gray-900 rounded-3xl border border-gray-700 p-4 flex flex-col items-center justify-between">
-                        <span class="text-white text-xs">9:41</span>
-                        <div class="grid grid-cols-2 gap-2 w-full">
-                            <div class="bg-blue-500 rounded-lg h-12"></div>
-                            <div class="bg-red-500 rounded-lg h-12"></div>
+                <div class="aspect-square bg-primary-950 rounded-lg overflow-hidden mb-4 relative">
+                     <div class="absolute inset-0 flex items-center justify-center text-white p-8">
+                        <div class="border-2 border-primary-400 rounded-lg p-6 w-full">
+                            <div class="h-2 bg-primary-400 rounded mb-3 w-3/4"></div>
+                            <div class="h-2 bg-primary-400/60 rounded mb-3 w-full"></div>
+                            <div class="h-2 bg-primary-400/40 rounded w-1/2"></div>
+                        </div>
+                     </div>
+                </div>
+                <h3 class="text-base font-medium text-gray-900 group-hover:underline">Case study: From zero to shipped in 3 hours</h3>
+            </div>
+
+             <!-- Post 4 -->
+             <div class="group cursor-pointer">
+                <div class="aspect-square bg-gray-100 rounded-lg overflow-hidden mb-4 relative border-2 border-gray-200">
+                    <div class="absolute inset-0 flex items-center justify-center p-8">
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-gray-900 mb-2">vs</div>
+                            <div class="text-sm text-gray-600">v0 • Galileo • Stitch</div>
                         </div>
                     </div>
                 </div>
-                <h3 class="text-sm font-medium text-gray-900 group-hover:underline">New Genre designs identity, platform and website for new design standards tool</h3>
+                <h3 class="text-base font-medium text-gray-900 group-hover:underline">How Dawnlabs compares to other AI design tools</h3>
             </div>
 
-             <!-- Blog Post 6 -->
+             <!-- Post 5 -->
              <div class="group cursor-pointer">
-                <div class="aspect-square bg-teal-600 rounded-lg overflow-hidden mb-4 relative">
-                     <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000&auto=format&fit=crop" alt="Phone" class="w-full h-full object-cover mix-blend-overlay" />
+                <div class="aspect-square bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg overflow-hidden mb-4 relative">
+                    <div class="absolute inset-0 flex items-center justify-center p-8">
+                        <div class="text-white text-center">
+                            <div class="text-6xl mb-4">💡</div>
+                            <div class="text-lg font-semibold">Design reasoning explained</div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="text-sm font-medium text-gray-900 group-hover:underline">The New Genre Studio Revamps Framework, the Challenge Platform: A Fresh Approach to...</h3>
+                <h3 class="text-base font-medium text-gray-900 group-hover:underline">What does it mean for AI to "reason" about design?</h3>
+            </div>
+
+             <!-- Post 6 -->
+             <div class="group cursor-pointer">
+                <div class="aspect-square bg-primary-100 rounded-lg overflow-hidden mb-4 relative border-2 border-primary-200">
+                     <div class="absolute inset-0 flex items-center justify-center p-8">
+                        <div class="text-center">
+                            <div class="text-primary-700 font-mono text-sm mb-4">&lt;Component /&gt;</div>
+                            <div class="text-gray-700 text-xs">Clean, semantic, accessible</div>
+                        </div>
+                     </div>
+                </div>
+                <h3 class="text-base font-medium text-gray-900 group-hover:underline">The code Dawnlabs generates (and why it's different)</h3>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
+    <!-- CTA Section -->
     <section class="px-6 md:px-12 lg:px-24 py-12">
-        <div class="bg-gradient-to-r from-[#eaddcf] to-[#e8d5c4] rounded-2xl p-8 md:p-16 lg:p-20">
-            <h3 class="font-serif text-2xl md:text-3xl text-gray-900 mb-4">Get dispatches from the edge of unknown</h3>
-            <p class="text-gray-600 mb-8 max-w-md">Every month, we promise to share what we're seeing, making, and thinking. Sign up if you dare.</p>
+        <div class="bg-gradient-to-br from-primary-950 to-gray-950 rounded-2xl p-8 md:p-16 lg:p-20 text-white">
+            <h3 class="font-serif text-3xl md:text-4xl mb-4">Ready to ship faster?</h3>
+            <p class="text-white/70 mb-8 max-w-md text-lg">Join product builders who are already using Dawnlabs to turn ideas into production-ready interfaces.</p>
             
             <form class="flex flex-col sm:flex-row gap-4 max-w-lg">
-                <input type="email" placeholder="johnnyappleseed@newgenre.studio" class="flex-1 bg-white/50 border-0 rounded-lg px-4 py-3 text-sm placeholder:text-gray-400 focus:ring-1 focus:ring-gray-400 outline-none" />
-                <button type="submit" class="bg-transparent border border-gray-900/20 hover:bg-gray-900 hover:text-white transition-colors text-gray-900 px-6 py-3 rounded-lg text-sm font-medium">
-                    Sign me up
+                <input type="email" placeholder="your@email.com" class="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm placeholder:text-white/40 focus:ring-2 focus:ring-primary-500 outline-none text-white" />
+                <button type="submit" class="bg-primary-500 hover:bg-primary-600 transition-colors text-white px-8 py-3 rounded-lg text-sm font-medium">
+                    Get early access
                 </button>
             </form>
-            <p class="text-[10px] text-gray-500 mt-4">We'll never share your details. By signing up, you agree to receive communications from New Genre. Read our Privacy Policy.</p>
+            <p class="text-[11px] text-white/50 mt-4">Join the waitlist for early access. No spam, just updates on our progress.</p>
         </div>
     </section>
 
-    <!-- Constellations (Footer Hero) -->
-    <section class="relative bg-gradient-to-b from-[#e69d75] via-[#c46d5e] to-[#8b3a2b] pt-32 pb-48 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <!-- Why Dawnlabs Section -->
+    <section class="relative bg-gradient-to-b from-gray-900 via-gray-950 to-black pt-32 pb-48 px-6 md:px-12 lg:px-24 overflow-hidden">
         <div class="max-w-5xl relative z-10">
-            <h2 class="font-serif text-4xl md:text-6xl lg:text-7xl text-[#fdfbf7] leading-tight mb-8">
-                All our constellations, under one sky. <br />
-                <span class="text-[#fdfbf7]/70">Find out how we chart the path from idea to icon — through strategy, creation, building, and scaling — turning the unseeable into the undeniable.</span>
+            <h2 class="font-serif text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-8">
+                Design tools gave you templates. <br />
+                <span class="text-white/60">We give you reasoning.</span>
             </h2>
+            <p class="text-xl text-white/70 max-w-3xl mb-12">
+                The $50B design tools market is built on templates and patterns. Dawnlabs is different. Our AI understands structure, hierarchy, and intent—not just what looks good, but why it works.
+            </p>
             
-            <div class="mt-16">
-                 <a href="/approach" class="inline-flex items-center justify-center px-6 py-3 border border-white/30 rounded-full text-sm font-medium text-white hover:bg-white hover:text-[#8b3a2b] transition-colors duration-300 backdrop-blur-sm">
-                    Our Approach
+            <div class="mt-16 flex gap-4">
+                 <a href="#examples" class="inline-flex items-center justify-center px-6 py-3 bg-primary-500 text-white rounded-full text-sm font-medium hover:bg-primary-600 transition-colors duration-300">
+                    See examples
+                </a>
+                 <a href="#how-it-works" class="inline-flex items-center justify-center px-6 py-3 border border-white/30 rounded-full text-sm font-medium text-white hover:bg-white hover:text-gray-900 transition-colors duration-300 backdrop-blur-sm">
+                    How it works
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#3e1c16] text-[#eaddcf] px-6 md:px-12 lg:px-24 pt-24 pb-12 relative overflow-hidden">
-        
-        <!-- Large Flower Image Overlapping Sections -->
-        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-0 w-[800px] h-[1000px] pointer-events-none z-0 opacity-90 mix-blend-hard-light">
-             <img src="https://images.unsplash.com/photo-1596294399224-b174780e816e?q=80&w=1000&auto=format&fit=crop" alt="Hibiscus Flower" class="w-full h-full object-contain" />
-        </div>
-
+    <footer class="bg-black text-gray-400 px-6 md:px-12 lg:px-24 pt-24 pb-12 relative overflow-hidden">
         <div class="relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-24">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
                 <div class="col-span-1 md:col-span-2">
-                    <a href="/contact" class="text-2xl font-medium hover:opacity-80 transition-opacity inline-flex items-center">
-                        Work with us <span class="ml-2">→</span>
+                    <h3 class="text-2xl font-medium text-white mb-6">Dawnlabs</h3>
+                    <p class="text-gray-400 max-w-md mb-8">
+                        Transform ideas into production-ready interfaces through AI that reasons about design structure, not templates.
+                    </p>
+                    <a href="mailto:hello@dawnlabs.ai" class="text-primary-400 hover:text-primary-300 transition-colors inline-flex items-center">
+                        hello@dawnlabs.ai <span class="ml-2">→</span>
                     </a>
                 </div>
                 
-                <div class="space-y-4">
-                    <h4 class="font-medium text-white">London, UK</h4>
-                    <p class="text-sm opacity-70">5:20 am</p>
-                    <div class="pt-4 text-sm opacity-70 space-y-1">
-                        <p>london@newgenre.studio</p>
-                        <p>+44 20 4572 6788</p>
-                        <p class="mt-4">2 Appleby Yard,<br>Seames Walk,<br>London SE10 0BU, UK</p>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-medium text-white mb-3">Product</h4>
+                        <div class="space-y-2 text-sm">
+                            <a href="#examples" class="block hover:text-white transition-colors">Examples</a>
+                            <a href="#how-it-works" class="block hover:text-white transition-colors">How it works</a>
+                            <a href="#" class="block hover:text-white transition-colors">Pricing</a>
+                            <a href="#" class="block hover:text-white transition-colors">Documentation</a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="space-y-4">
-                    <h4 class="font-medium text-white">San Francisco</h4>
-                    <p class="text-sm opacity-70">9:20 pm</p>
-                    <div class="pt-4 text-sm opacity-70 space-y-1">
-                        <p>sf@newgenre.studio</p>
-                        <p>+1 650 466 6274</p>
+                    
+                    <div>
+                        <h4 class="font-medium text-white mb-3">Company</h4>
+                        <div class="space-y-2 text-sm">
+                            <a href="#" class="block hover:text-white transition-colors">About</a>
+                            <a href="#" class="block hover:text-white transition-colors">Blog</a>
+                            <a href="#" class="block hover:text-white transition-colors">Careers</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-end border-t border-white/10 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-8">
                 <div class="mb-4 md:mb-0">
-                    <!-- Logo Icon -->
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" class="text-white">
-                        <rect x="2" y="2" width="9" height="9" rx="2" />
-                        <rect x="13" y="2" width="9" height="9" rx="2" />
-                        <rect x="2" y="13" width="9" height="9" rx="2" />
-                        <rect x="13" y="13" width="9" height="9" rx="2" />
+                    <!-- Logo -->
+                    <svg width="60" height="35" viewBox="0 0 116 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M44.6215 56.0343C46.6079 53.651 49.5502 52.2726 52.6531 52.2726H94.8018C106.35 52.2726 115.711 42.9114 115.711 31.3637V20.909C115.711 9.36134 106.35 0 94.8018 0H86.6303C83.5277 0 80.5851 1.37818 78.599 3.76179L71.8003 11.9201C69.814 14.3037 66.8716 15.6818 63.7688 15.6818H21.62C10.0722 15.6818 0.710938 25.043 0.710938 36.5909V47.0454C0.710938 58.5933 10.0722 67.9546 21.62 67.9546H29.7916C32.8942 67.9546 35.8367 66.5765 37.8229 64.1929L44.6215 56.0343ZM100.029 20.909C100.029 18.022 97.6888 15.6818 94.8018 15.6818H78.7895C75.6866 15.6818 72.7443 17.0599 70.7579 19.4435L63.9593 27.602C61.9731 29.9854 59.0306 31.3637 55.9279 31.3637H21.62C18.7331 31.3637 16.3927 33.704 16.3927 36.5909V47.0454C16.3927 49.9324 18.7331 52.2726 21.62 52.2726H37.6324C40.7352 52.2726 43.6776 50.8945 45.664 48.5109L52.4626 40.3526C54.4488 37.969 57.3913 36.5909 60.4939 36.5909H94.8018C97.6888 36.5909 100.029 34.2507 100.029 31.3637V20.909Z" fill="white"/>
                     </svg>
                 </div>
                 
-                <div class="flex gap-6 text-xs font-medium">
-                    <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
-                    <a href="#" class="hover:text-white transition-colors">Instagram</a>
-                    <a href="#" class="hover:text-white transition-colors">X</a>
-                    <a href="#" class="hover:text-white transition-colors">Join Us</a>
+                <div class="flex gap-6 text-sm">
+                    <a href="https://twitter.com/dawnlabs" class="hover:text-white transition-colors">Twitter</a>
+                    <a href="https://github.com/dawnlabs" class="hover:text-white transition-colors">GitHub</a>
+                    <a href="https://linkedin.com/company/dawnlabs" class="hover:text-white transition-colors">LinkedIn</a>
+                    <a href="https://producthunt.com/@dawnlabs" class="hover:text-white transition-colors">Product Hunt</a>
                 </div>
             </div>
 
-            <div class="flex justify-between text-[10px] opacity-50 mt-12">
-                <p>© 2025 New Genre</p>
-                <p>Privacy</p>
+            <div class="flex flex-col md:flex-row justify-between text-xs opacity-50 mt-12 gap-4">
+                <p>© 2025 Dawnlabs. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:opacity-100 transition-opacity">Privacy Policy</a>
+                    <a href="#" class="hover:opacity-100 transition-opacity">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
